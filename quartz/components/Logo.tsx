@@ -8,7 +8,7 @@ const Logo: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzComponentP
   return (
     <div class={classNames(displayClass, "site-brand")}>
       <a class="brand-link" href={baseDir} aria-label={cfg.pageTitle}>
-        <img class="brand-mark" src={`${baseDir}ss.svg`} alt="" />
+        <img class="brand-mark" src={`${baseDir}static/ss.svg`} alt="" />
         <span class="brand-title">{cfg.pageTitle}</span>
       </a>
     </div>
