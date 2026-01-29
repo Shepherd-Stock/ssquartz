@@ -1,4 +1,4 @@
-import { pathToRoot } from "../util/path"
+import { joinSegments, pathToRoot } from "../util/path"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { classNames } from "../util/lang"
 
@@ -8,7 +8,7 @@ const Logo: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzComponentP
   return (
     <div class={classNames(displayClass, "site-brand")}>
       <a class="brand-link" href={baseDir} aria-label={cfg.pageTitle}>
-        <img class="brand-mark" src={`${baseDir}static/ss.svg`} alt="" />
+        <img class="brand-mark" src={joinSegments(baseDir, "static/ss.svg")} alt="" />
         <span class="brand-title">{cfg.pageTitle}</span>
       </a>
     </div>
